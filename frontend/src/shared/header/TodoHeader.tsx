@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { RefreshCw, ListFilter } from "lucide-react"
+import { RefreshCw, ListFilter, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 // 新しいタスク追加ボタン
@@ -11,8 +11,14 @@ export function TodoHeader() {
     }
 
     const handleFilterClick = () => {
-        navigate("/filter")  // フィルター画面へ遷移
+        navigate("/filter")
     }
+
+    const handleLogout = () => {
+        localStorage.removeItem("access-token")
+        navigate("/login")
+    }
+
     return (
         <>
             {/* ヘッダー部分 */}
@@ -35,6 +41,16 @@ export function TodoHeader() {
                     >
                         <ListFilter className="h-4 w-4 mr-2" />
                         フィルター
+                    </Button>
+                </div>
+                <div>
+                    <Button
+                        variant="destructive"
+                        className="flex items-center"
+                        onClick={handleLogout}
+                    >
+                        <LogOut className="h-4 w-4 mr-2" />
+                        ログアウト
                     </Button>
                 </div>
             </div>
