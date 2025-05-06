@@ -45,8 +45,8 @@ export function TodoHeader() {
                 </div>
                 <div>
                     <Button
-                        variant="destructive"
-                        className="flex items-center"
+                        variant="default"
+                        className="flex items-center bg-black text-white hover:bg-gray-800"
                         onClick={handleLogout}
                     >
                         <LogOut className="h-4 w-4 mr-2" />
