@@ -12,14 +12,11 @@ import { SearchTodoParams } from "@/features/todos/schemas/TodoSchema"
 
 export default function FilterPage() {
   const { todos, fetchTodosByCondition } = useTodoContext()
-  const [loading, setLoading] = useState(true);
   const [searchParams, setSearchParams] = useState<SearchTodoParams>({})
   
   useEffect(() => {
     const fetch = async () => {
-      setLoading(true)
       await fetchTodosByCondition(searchParams)
-      setLoading(false)
     }
     fetch()
   }, [searchParams])
@@ -33,7 +30,7 @@ export default function FilterPage() {
                   searchParams={searchParams}
                   setSearchParams={setSearchParams}
                 />
-                <SearchList todos={todos} loading={loading}/>
+                <SearchList todos={todos} />
             </div>
         </DndProvider>
     </SidebarProvider>

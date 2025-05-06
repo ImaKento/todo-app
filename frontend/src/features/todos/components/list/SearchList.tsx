@@ -5,21 +5,11 @@ import { Todo } from "@/features/todos/schemas/TodoSchema";
 
 type Props = {
     todos: Todo[]
-    loading: boolean
 }
 
-export default function SearchList({ todos, loading }: Props) {
+export default function SearchList({ todos }: Props) {
     const { useDuplicateTodo, useMoveTodo, useMoveCompleteTodo, useDeleteTodo } = useUpdateTodo()
-
-    if (loading) {
-        return (
-          <div className="flex items-center justify-center h-screen">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-            <span className="ml-4 text-gray-700">タスクを読み込んでいます...</span>
-          </div>
-        )
-    }
-
+    
     return (
         <>
             {/* カンバンボード */}
