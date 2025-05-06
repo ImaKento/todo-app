@@ -93,7 +93,14 @@ func (repo *TodoRepository) Search(params value_object.SearchTodoParams) ([]enti
 	// model → entityに変換
 	var result []entity.Todo
 	for _, m := range todos {
-		result = append(result, todoModelToEntity(m))
+		todo := todoModelToEntity(m)
+		// クエリにGteとLteを複合して渡せなかったため、Go側でフィルタリング
+		if params.DueFrom != nil {
+			if todo.DueDate() == nil || todo.DueDate().Value().Before(params.DueFrom.Value()) {
+				continue
+			}
+		}
+		result = append(result, todo)
 	}
 
 	return result, nil
