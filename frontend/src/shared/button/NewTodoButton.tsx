@@ -12,7 +12,7 @@ export function NewTodoButton({ onClick, className }: { onClick: any,  className
             )}
         >
         <Plus className="h-4 w-4 mr-2" />
-        <span>New page</span>
+        <span>New Todo</span>
         </button>
     )
 }
