@@ -2,37 +2,37 @@
 
 ## アプリケーションの説明
 ### サインアップ画面
-![サインアップ画面](./image/signup.png)
+![サインアップ画面](./images/signup.png)
 ### サインアップのバリデーション
-![サインアップバリデーション画面](./image/signup_error.png)
+![サインアップバリデーション画面](./images/signup_error.png)
 
 サインアップ画面からユーザーの登録が可能です   
 emailをユニークにしており、同じメールアドレスのユーザーは登録できません
 
 ### ログイン画面
-![ログイン画面](./image/login.png)
+![ログイン画面](./images/login.png)
 
 ### ログインのバリデーション
-![ログインバリデーション画面](./image/login_error.png)
+![ログインバリデーション画面](./images/login_error.png)
 
 ログイン画面からログインが可能です   
 登録したメールアドレスとパスワードを入力し、ログインします   
 ログインに成功するとJWTトークンを発行します
 
 ### メイン画面
-![メイン画面](./image/main.png)
+![メイン画面](./images/main.png)
 
 メイン画面では、「＋ New Todo」からTodoの作成が可能です
 Todoカードをドラック＆ドロップすることで、未着手・進行中・完了に変更することができます
 
-![Todoカラム](./image/main_column.png)
+![Todoカラム](./images/main_column.png)
 
 Todoカードをクリックすることで、Todoの編集が可能です
 「＋」ボタンからTodoの複製が可能です
 完了・削除ボタンからTodoの完了・削除が可能です
 
 ### 検索画面
-![検索画面](./image/filter.png)
+![検索画面](./images/filter.png)
 
 フィルター画面から、タイトル・内容・期限でのTodoの検索が可能です
 
