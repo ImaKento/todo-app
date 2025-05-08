@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
 import { DndProvider } from "react-dnd"
+import { Toaster } from "sonner"
 import { HTML5Backend } from "react-dnd-html5-backend"
-import {
-  SidebarProvider,
-} from "@/components/ui/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 import SearchList from "@/features/todos/components/list/SearchList"
 import { useTodoContext } from "@/contexts/TodoContext"
 import { TodoHeader } from "@/shared/header/TodoHeader"
@@ -31,6 +30,7 @@ export default function FilterPage() {
                   setSearchParams={setSearchParams}
                 />
                 <SearchList todos={todos} />
+                <Toaster richColors position="top-center" />
             </div>
         </DndProvider>
     </SidebarProvider>
