@@ -61,7 +61,7 @@ export function TodoColumn({
     return (
         <div className="space-y-4">
             {/* ラベル部分 */}
-            <div className="flex items-center space-x-2 mb-2">
+            <div className="flex items-center justify-between mb-2">
                 {/* 左寄せ：タイトル・emoji・カウント */}
                 <div className="flex items-center space-x-2">
                     <div className={`w-3 h-3 rounded-full ${color}`}></div>
