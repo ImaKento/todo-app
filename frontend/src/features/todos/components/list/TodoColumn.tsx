@@ -62,11 +62,19 @@ export function TodoColumn({
         <div className="space-y-4">
             {/* ラベル部分 */}
             <div className="flex items-center space-x-2 mb-2">
-                <div className={`w-3 h-3 rounded-full ${color}`}></div>
-                <h2 className="font-medium">
+                {/* 左寄せ：タイトル・emoji・カウント */}
+                <div className="flex items-center space-x-2">
+                    <div className={`w-3 h-3 rounded-full ${color}`}></div>
+                    <h2 className="font-medium">
                     {title} {emoji}
-                </h2>
-                <span className="text-gray-500 ml-2">{count}</span>
+                    </h2>
+                    <span className="text-gray-500 ml-2">{count}</span>
+                </div>
+                {/* 新規作成ボタン */}
+                <CreateTodoDialog 
+                    trigger={<NewTodoButton onClick={() => {}} className={cn(bgColor, hoverColor)} />}
+                    status={status}
+                />
             </div>
             {/* ドロップエリア */}
             <div
@@ -108,12 +116,6 @@ export function TodoColumn({
                     onClose={handleCloseDialog}
                     />
                 )}
-
-                {/* 新規作成ボタン */}
-                <CreateTodoDialog 
-                    trigger={<NewTodoButton onClick={() => {}} className={cn(bgColor, hoverColor)} />}
-                    status={status}
-                />
             </div>
         </div>
     )

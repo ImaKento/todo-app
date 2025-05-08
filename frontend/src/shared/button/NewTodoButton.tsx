@@ -7,7 +7,7 @@ export function NewTodoButton({ onClick, className }: { onClick: any,  className
         <button
             onClick={onClick}
             className={cn(
-                "w-full py-3 flex items-center justify-center text-gray-500 rounded-lg mt-3 transition-colors",
+                "w-[200px] py-3 flex items-center justify-center text-black rounded-lg mt-3 transition-colors",
                 className,
             )}
         >
