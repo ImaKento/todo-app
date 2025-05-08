@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import { toast } from "sonner"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { CreateTodoParams, createTodoSchema, Todo, UpdateTodoParams, updateTodoSchema } from "@/features/todos/schemas/TodoSchema"
 import { useTodoContext } from "@/contexts/TodoContext"
@@ -97,6 +98,13 @@ export const useUpdateTodo = () => {
     const useDuplicateTodo = async (todoId: string) => {
         const todo = todos.find(t => t.id === todoId)
         if (!todo) return
+
+        const copyTitle = `${todo.title}のコピー`
+
+        if (copyTitle.length > 50) {
+            toast.error("タイトルが長すぎて複製できません（最大50文字）")
+            return
+        }
 
         try {
             await duplicateTodo(todoId)

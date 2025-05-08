@@ -33,11 +33,7 @@ func (usecase *DuplicateTodoUseCase) Execute(todoId value_object.TodoId, userId 
 	}
 
 	// Todoを複製
-	titleStr := todo.Title().Value()
-	if len(titleStr) > 95 {
-		titleStr = titleStr[:95]
-	}
-	newTitle := titleStr + "のコピー"
+	newTitle := todo.Title().Value() + "のコピー"
 	newTitleVo, err := value_object.NewTitle(newTitle)
 	if err != nil {
 		return nil, err
