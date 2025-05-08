@@ -1,7 +1,6 @@
 import { useEffect } from "react"
-import {
-  SidebarProvider,
-} from "@/components/ui/sidebar"
+import { Toaster } from "sonner"
+import { SidebarProvider } from "@/components/ui/sidebar"
 import TodoList from "@/features/todos/components/list/TodoList"
 import { useTodoContext } from "@/contexts/TodoContext"
 import { TodoHeader } from "@/shared/header/TodoHeader"
@@ -25,6 +24,7 @@ export default function TodoPage() {
         <div className="container mx-auto p-4">
           <TodoHeader />
           <TodoList todos={todos} />
+          <Toaster richColors position="top-center" />
         </div>
       </DndProvider>
     </SidebarProvider>
