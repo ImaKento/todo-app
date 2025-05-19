@@ -38,7 +38,6 @@ export const SignupForm = ({
                                     id="name"
                                     type="name"
                                     placeholder="Full name"
-                                    required
                                     {...register("name")}
                                 />
                                 {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
@@ -49,7 +48,6 @@ export const SignupForm = ({
                                     id="email"
                                     type="email"
                                     placeholder="m@example.com"
-                                    required
                                     {...register("email")}
                                 />
                                 {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
@@ -63,7 +61,6 @@ export const SignupForm = ({
                                 <Input 
                                     id="password" 
                                     type="password" 
-                                    required 
                                     {...register("password")}
                                 />
                                 {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}

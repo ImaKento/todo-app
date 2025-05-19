@@ -37,7 +37,6 @@ export const LoginForm = ({
                                 id="email"
                                 type="email"
                                 placeholder="m@example.com"
-                                required
                                 {...register("email")}
                             />
                             {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}

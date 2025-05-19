@@ -64,7 +64,7 @@ export function DraggableTodoCard({
         type: "todo",
         item: { type: "todo", id: todo.id, status: todo.status },
         collect: (monitor: any) => ({
-        isDragging: !!monitor.isDragging(),
+            isDragging: !!monitor.isDragging(),
         }),
     })
 

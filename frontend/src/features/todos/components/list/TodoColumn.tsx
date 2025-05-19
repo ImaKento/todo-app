@@ -54,7 +54,7 @@ export function TodoColumn({
         }
         },
         collect: (monitor: any) => ({
-        isOver: !!monitor.isOver(),
+            isOver: !!monitor.isOver(),
         }),
     })
 
