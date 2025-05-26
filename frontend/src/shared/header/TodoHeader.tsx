@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { RefreshCw, ListFilter, LogOut } from "lucide-react"
+import { RefreshCw, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 // 新しいタスク追加ボタン
@@ -10,9 +10,9 @@ export function TodoHeader() {
         navigate("/")
     }
 
-    const handleFilterClick = () => {
-        navigate("/filter")
-    }
+    // const handleFilterClick = () => {
+    //     navigate("/filter")
+    // }
 
     const handleLogout = () => {
         localStorage.removeItem("access-token")
