@@ -2,7 +2,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom"
 import LoginPage from "@/pages/LoginPage"
 import SignupPage from "@/pages/SinupPage"
 import TodoPage from "@/pages/TodoPage"
-import FilterPage from "@/pages/FilterPage"
+// import FilterPage from "@/pages/FilterPage"
 import { PrivateRoute } from "./PrivateRoute"
 
 export const AppRoutes = () => {
