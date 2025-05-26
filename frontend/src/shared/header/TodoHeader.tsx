@@ -33,7 +33,7 @@ export function TodoHeader() {
                         全タスク（ステータス別）
                     </Button>
                 </div>
-                <div className="flex-1 items-center space-x-4">
+{/*                 <div className="flex-1 items-center space-x-4">
                     <Button
                         variant="outline"
                         className="flex"
@@ -42,7 +42,7 @@ export function TodoHeader() {
                         <ListFilter className="h-4 w-4 mr-2" />
                         フィルター
                     </Button>
-                </div>
+                </div> */}
                 <div>
                     <Button
                         variant="default"
