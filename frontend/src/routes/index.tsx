@@ -19,14 +19,14 @@ export const AppRoutes = () => {
                         </PrivateRoute>
                     }
                 />
-                <Route
+{/*                 <Route
                     path="/filter"
                     element={
                         <PrivateRoute>
                             <FilterPage />
                         </PrivateRoute>
                     }
-                />
+                /> */}
             </Routes>
         </BrowserRouter>
     );
